@@ -1,0 +1,243 @@
+ body {
+ 
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Serif 4', 'Times New Roman', serif;
+  color: #1a1a1a;
+}
+ 
+ 
+ 
+ .navbar {
+    
+  font-family: 'Times New Roman', Times, Georgia, serif;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 18px;
+    border-bottom: 1px solid #EEE;
+    background-color: #fff;
+  }
+  .navbar-left {
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .navbar-left img {
+    height: 70px;
+    width: 80px;
+  }
+  
+  .navbar-center {
+    display: flex;
+    gap: 40px;
+  }
+  .navbar-center a {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .navbar-center a:hover,
+  .navbar-center a.active {
+    font-weight: 500;
+    color: #2a9d8f;
+  }
+  .navbar-right {
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .search-bar {
+    padding: 6px 12px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+  }
+  .search-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: #999;
+  }
+  .btn-signup,
+  .btn-login {
+    padding: 7px 20px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .btn-signup {
+    background: transparent;
+    border: 1px solid #222;
+    background-color: #264653;
+    color:white
+  }
+  .btn-signup:hover {
+    background: #2a9d8f;
+    color: #fff;
+  }
+  .btn-login {
+    background: #264653;
+    color: #fff;
+  }
+  .btn-login:hover {
+    background: #2a9d8f;
+  }
+.navbar-toggle {
+  display: none;
+}
+
+.contact-container {
+  max-width: 900px;
+  min-height: 400px; /* keeps container size consistent */
+  margin: 70px auto;
+  background: #fff;
+  padding: 40px 36px;
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(22,50,69,0.12);
+  transition: all 0.3s ease;
+}
+h1 {
+  text-align: center;
+  color: #264653;
+  font-size: 2.8rem;
+  margin-bottom: 34px;
+  letter-spacing: 1.3px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+label {
+
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  color: #000000;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 12px 16px;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  font-size: 1rem;
+  resize: vertical;
+}
+textarea {
+  min-height: 110px;
+}
+button {
+  background-color: #264653;
+  border: none;
+  color: white;
+  padding: 14px 22px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.26s ease;
+  margin-top: 12px;
+}
+button:hover {
+  background-color: #2a9d8f;
+}
+.message{
+ 
+background-color: #264653;
+  border: none;
+  color: rgb(255, 255, 255);
+ 
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.26s ease;
+  margin-left: 180px;
+  margin-top: 50px;
+}
+#successMessage
+{
+    margin-left: 150px;
+     color:green; 
+     margin-top:120px;
+     font-size: 1.6rem;
+      font-weight:800;
+      display: none;
+}
+
+.main-footer {
+  background: #e7f3e4;
+  padding: 42px 0 18px 0;
+  text-align: center;
+  font-size: 1.08rem;
+  color: #333;
+  margin-top: 0px;
+  box-shadow: 0 -2px 14px rgba(0,0,0,0.03);
+}
+.footer-content {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 0 18px;
+}
+.footer-logo .footer-title {
+  font-weight: bold;
+  font-size: 1.38rem;
+  color: #1767fa;
+  letter-spacing: 1px;
+}
+.footer-links {
+  display: flex;
+  gap: 28px;
+}
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.footer-links a:hover {
+  color: #1767fa;
+}
+.footer-social {
+  display: flex;
+  gap: 19px;
+}
+.footer-meta {
+  margin-left: 150px;
+  font-size: 0.97rem;
+  color: #434141;
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+.footer-social .fa {
+  padding: 7px;
+  font-size: 38px;
+  width: 34px;
+  height: 36px;
+  text-align: center;
+  text-decoration: none;
+  color: #333;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  margin: 3px 6px;
+}
+.footer-social .fa:hover {
+  color: white;
+}
+
+.footer-social .fa-facebook { background: #618ae1; }
+.footer-social .fa-twitter { background: #55acee; }
+.footer-social .fa-instagram { background: #db546d; }
+.footer-social .fa-linkedin { background: #5ab8eb; }
