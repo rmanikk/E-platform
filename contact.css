@@ -163,15 +163,87 @@ background-color: #264653;
   margin-left: 180px;
   margin-top: 50px;
 }
-#successMessage
-{
-    margin-left: 150px;
-     color:green; 
-     margin-top:120px;
-     font-size: 1.6rem;
-      font-weight:800;
-      display: none;
+#successMessage {
+  max-width: 90vw; /* limit width to 90% viewport width */
+  margin: 120px auto 0 auto; /* center horizontally, margin top 120px */
+  padding: 16px 20px; /* add some padding around text */
+  color: green;
+  font-size: 1.6rem;
+  font-weight: 800;
+  text-align: center; /* center text */
+  box-sizing: border-box; /* include padding in width calculation */
+  display: none;
+   overflow-wrap: break-word;
+  word-break: break-word;
 }
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  #successMessage {
+    margin-top: 80px;
+    font-size: 1.2rem;
+    padding: 12px 15px;
+    max-width: 95vw;
+  }
+}
+
+@media (max-width: 480px) {
+  #successMessage {
+    font-size: 1rem;
+    margin-top: 60px;
+    padding: 10px 12px;
+    max-width: 100vw;
+  }
+}
+
+button.send-another {
+  
+  padding: 14px 22px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.26s ease;
+  width: auto; /* default width for larger screens */
+  max-width: 220px; /* optional max width */
+  display: inline-block;
+   margin: 20px auto 0 auto;
+}
+
+/* Responsive styles for smaller widths */
+@media (max-width: 768px) {
+  button.send-another {
+     margin: 30px auto 0 auto;
+    width: 90%; /* make button span most of the screen */
+    font-size: 1rem;
+    padding: 12px 18px;
+    display: block;
+   
+  }
+}
+
+@media (max-width: 480px) {
+  button.send-another {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    max-width: 100%;
+     margin-top: 40px;
+  }
+}
+
+
 
 .main-footer {
   position: relative;
@@ -248,7 +320,7 @@ background-color: #264653;
 
 
 
-/* Base mobile-first styles */
+
 
 
 /* Small phones and smaller (up to 320px) */
