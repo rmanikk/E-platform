@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title> Contact </title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,12 +23,20 @@
       <a href="/team.html"> Our Team </a>
       <a href="/books.html">Books</a>
       <a href="#" class="active">Contact Us</a>
+       <button class="btn-signup">Sign Up</button>
+      <button class="btn-login">Login</button>
     </div>
+
+     <div class="navbar-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
     <div class="navbar-right">
-      <input class="search-bar" type="text" placeholder="Search Courses" />
-      <div class="search-icon">&#128269;</div>
+ 
       <button class="btn-signup">Sign Up</button>
       <button class="btn-login">Login</button>
+      
+      
     </div>
   </nav>
 
@@ -74,6 +82,11 @@
 </div>
   </div>
 </footer>
+<script>
+  document.querySelector('.navbar-toggle').addEventListener('click', () => {
+  document.querySelector('.navbar-center').classList.toggle('active');
+});
+</script>
   <script>
     function showSuccessMessage(event) {
       event.preventDefault(); // prevent actual form submission
