@@ -299,7 +299,7 @@ button.send-another {
 }
 .footer-social .fa {
   padding: 7px;
-  font-size: 38px;
+  font-size: 22px;
   width: 34px;
   height: 36px;
   text-align: center;
@@ -511,6 +511,10 @@ button.send-another {
   }
 }
 
+
+
+
+
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -533,7 +537,7 @@ button.send-another {
   }
   
   .footer-social .fa {
-    font-size: 28px;
+    font-size: 23px;
     width: 30px;
     height: 32px;
     padding: 5px;
@@ -555,37 +559,13 @@ button.send-another {
   .footer-logo .navbar-left img {
     max-width: 140px;
   }
+  .footer-social .fa {
+    font-size: 25px;
+  }
 }
 
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 15px;
-  }
-  
-  .footer-meta {
-    margin-left: 0;
-  }
-  
-  .footer-logo .navbar-left img {
-    max-width: 120px;
-    margin: 0 auto;
-  }
-  
-  .footer-social {
-    justify-content: center;
-    gap: 12px;
-  }
-  
-  .footer-social .fa {
-    font-size: 28px;
-    width: 30px;
-    height: 32px;
-    padding: 5px;
-    margin: 3px 4px;
-  }
-}
+
+
 body{
   
   padding-bottom: env(safe-area-inset-bottom);
