@@ -275,6 +275,8 @@ box-shadow: 0 10px 34px rgb(51, 128, 210);
 /* Small phones and smaller (up to 320px) */
 @media (max-width: 351px) {
 .navbar {
+  margin-left: 10px;
+    padding: 8px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -284,6 +286,7 @@ box-shadow: 0 10px 34px rgb(51, 128, 210);
 
   /* Keep navbar-right (search section) aligned right */
   .navbar-right {
+    
     display: flex;
     align-items: center;
     gap: 10px;
@@ -348,7 +351,10 @@ box-shadow: 0 10px 34px rgb(51, 128, 210);
 @media (min-width: 352px) and (max-width: 425px) {
 .navbar {
     display: flex;
-    align-items: center;
+    
+    margin-left: 15px;
+    padding: 8px 12px;
+  
     justify-content: space-between;
     padding: 10px 20px;
     position: relative;
@@ -420,10 +426,12 @@ box-shadow: 0 10px 34px rgb(51, 128, 210);
 @media (min-width: 426px) and (max-width: 768px) {
   /* Make navbar a proper flex container */
   .navbar {
+     margin-left: 20px;
+    padding: 10px 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+   
     position: relative;
   }
 
@@ -658,6 +666,7 @@ box-shadow: 0 10px 34px rgb(51, 128, 210);
   }
 }
 
+/* Tablet landscape and small desktops */
 @media (min-width: 769px) and (max-width: 1024px) {
   .footer-content {
     justify-content: center;
@@ -700,6 +709,9 @@ main{
 
 
 
+/* ===============================
+   📱 Small phones (max-width: 480px)
+================================= */
 @media (max-width: 480px) {
   .bookshelf {
     padding: 0 10px 20px;
@@ -744,7 +756,9 @@ main{
 }
 
 
-
+/* ===============================
+   📲 Tablets portrait (481px - 768px)
+================================= */
 @media (min-width: 481px) and (max-width: 768px) {
   .bookshelf {
     padding: 0 20px 30px;
@@ -773,7 +787,9 @@ main{
 }
 
 
-
+/* ===============================
+   💻 Tablets landscape / Small laptops (769px - 1024px)
+================================= */
 @media (min-width: 769px) and (max-width: 1024px) {
   .bookshelf {
     padding: 0 40px;
@@ -798,6 +814,9 @@ main{
 }
 
 
+/* ===============================
+   🖥️ Desktops (1025px - 1440px)
+================================= */
 @media (min-width: 1025px) and (max-width: 1440px) {
   .book-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -814,6 +833,9 @@ main{
 }
 
 
+/* ===============================
+   🧠 Ultra-wide screens (1441px and up)
+================================= */
 @media (min-width: 1441px) {
   .bookshelf {
     max-width: 1600px;
