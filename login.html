@@ -1,38 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ambition Guru - Login</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | Anpadd</title>
+  <link rel="stylesheet" href="/auth.css" />
 </head>
 <body>
-<header>
-  <nav class="navbar">
-    <div class="logo">Ambition Guru</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="login.html" class="active">Login</a></li>
-      <li><a href="signup.html">Sign Up</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
-  <section class="auth-section">
-    <h1>Login</h1>
-    <form id="login-form">
-      <label for="email">Email</label>
-      <input type="email" id="email" required placeholder="Enter your email" />
-      <label for="password">Password</label>
-      <input type="password" id="password" required placeholder="Enter your password" />
-      <button type="submit" class="btn">Login</button>
-    </form>
-    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
-  </section>
-</main>
-<footer>
-  <p>&copy; 2025 Ambition Guru</p>
-</footer>
+
+<div class="auth-container">
+  <h2>Login</h2>
+  <input type="email" id="email" placeholder="Email" required />
+  <input type="password" id="password" placeholder="Password" required />
+  <button id="loginBtn">Login</button>
+  <a href="signup.html" class="auth-link">Don't have an account? Sign Up</a>
+</div>
+
+<script>
+const loginBtn = document.getElementById('loginBtn');
+
+loginBtn.addEventListener('click', () => {
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value.trim();
+
+  // Get stored users from localStorage
+  const users = JSON.parse(localStorage.getItem('users')) || [];
+  const user = users.find(u => u.email === email && u.password === password);
+
+  if(user){
+    localStorage.setItem('loggedInUser', JSON.stringify(user));
+    // Redirect based on role
+    if(user.role === 'admin'){
+      window.location.href = '/admin-dashboard.html';
+    } else {
+      window.location.href = '/user-dashboard.html';
+    }
+  } else {
+    alert('Invalid email or password!');
+  }
+});
+</script>
+
 </body>
 </html>
