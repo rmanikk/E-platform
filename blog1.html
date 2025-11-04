@@ -18,15 +18,19 @@
       <a href="/course-detail.html">Our Courses</a>
       <a href="#" class="active">Blogs</a>
       <a href="/team.html"> Our Team </a>
-      <a href="#">Books</a>
-      <a href="#">About Us</a>
+      <a href="/books.html">Books</a>
+      <a href="/contact.html">Contact Us</a>
+       <button class="btn-signup">Sign Up</button>
+      <button class="btn-login">Login</button>
     </div>
+
+<div class="navbar-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
     <div class="navbar-right">
-        <div class="navbar-toggle" aria-label="Toggle menu" onclick="toggleMenu()">
-  <i class="fa fa-bars" aria-hidden="true"></i>
-</div>
-      <input class="search-bar" type="text" placeholder="Search Courses" />
-      <div class="search-icon">&#128269;</div>
+        
+      
       <button class="btn-signup">Sign Up</button>
       <button class="btn-login">Login</button>
     </div>
@@ -104,10 +108,9 @@
 
   </main>
   <script>
-  function toggleMenu() {
-    const navLinks = document.querySelector('.navbar-center');
-    navLinks.classList.toggle('active');
-  }
+  document.querySelector('.navbar-toggle').addEventListener('click', () => {
+  document.querySelector('.navbar-center').classList.toggle('active');
+});
 </script>
   </body>
   </html>
