@@ -16,18 +16,26 @@
       <img src="/Images/logo.png" alt="Logo" />
     </div>
     <div class="navbar-center">
-      <a href="/index.html" >Home</a>
+      <a href="index.html" >Home</a>
       <a href="/course-detail.html">Our Courses</a>
-      <a href="blog.html">Blogs</a>
+      <a href="/blog.html">Blogs</a>
       <a href="#" class="active"> Our Team </a>
-      <a href="books.html">Books</a>
-      <a href="#">Contact Us</a>
+      <a href="/books.html">Books</a>
+      <a href="/contact.html" >Contact Us</a>
+       <button class="btn-signup">Sign Up</button>
+      <button class="btn-login">Login</button>
     </div>
+
+     <div class="navbar-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
     <div class="navbar-right">
-      <input class="search-bar" type="text" placeholder="Search Courses" />
-      <div class="search-icon">&#128269;</div>
+ 
       <button class="btn-signup">Sign Up</button>
       <button class="btn-login">Login</button>
+      
+      
     </div>
   </nav>
 
@@ -42,9 +50,9 @@
       <div class="team-item">
         <img src="/Images/Team Photos/pp.jpeg" alt="Instructor Name" />
         <div class="social-links">
-          <a href="https://www.facebook.com/real.manik.3956/" class="fa fa-facebook" title="Facebook"></a>
-          <a href="https://x.com/rm4nik2222" class="fa fa-twitter" title="Twitter"></a>
-          <a href="https://www.instagram.com/maneek_ofc/" class="fa fa-instagram"></a>
+          <a href="https://www.facebook.com/real.manik.3956/" target="blank" class="fa fa-facebook" title="Facebook"></a>
+          <a href="https://x.com/rm4nik2222" target="blank" class="fa fa-twitter" title="Twitter"></a>
+          <a href="https://www.instagram.com/maneek_ofc/" target="blank" class="fa fa-instagram"></a>
         </div>
         <div class="team-info">
           <h4> Manik Kafle</h4>
@@ -191,6 +199,11 @@
   </div>
 </footer>
 </main>
+<script>
+  document.querySelector('.navbar-toggle').addEventListener('click', () => {
+  document.querySelector('.navbar-center').classList.toggle('active');
+});
+</script>
 </body>
 
 </html>
