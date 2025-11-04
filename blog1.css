@@ -225,51 +225,441 @@
   display: none;
 }
 
-@media (max-width: 900px) {
-     .navbar {
-    margin-left: 10px;
-    padding: 10px 15px;
-    flex-wrap: wrap;
+/* Small phones and smaller (up to 320px) */
+@media (max-width: 351px) {
+.navbar {
+  margin-left: 10px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
   }
-  .navbar-center {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-  }
-  .navbar-left img {
-    height: 60px;
-    width: 70px;
-  }
+
+  /* Keep navbar-right (search section) aligned right */
   .navbar-right {
-    order: 2;
-    margin-right: 20px;
-    margin-top: 10px;
+    
+    display: flex;
+    align-items: center;
     gap: 10px;
   }
+
+  /* Hide buttons */
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+
+  /* Style search bar */
   .search-bar {
-    width: 140px;
+    width: 70px;
+    font-size: 15px;
+    padding: 6px 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    outline: none;
+  }
+    .search-icon {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  /* Hamburger icon — position to the right of search */
+  .navbar-toggle {
+    display: block;
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+
+    /* position it next to search bar */
+    position: absolute;
+    right: 20px;   /* stays at far right */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide center links initially */
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+}
+
+/* Small phones to larger phones (321px - 425px) */
+@media (min-width: 352px) and (max-width: 425px) {
+.navbar {
+    display: flex;
+    
+    margin-left: 15px;
+    padding: 8px 12px;
+  
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  /* Keep navbar-right (search section) aligned right */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hide buttons */
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+
+  /* Style search bar */
+  .search-bar {
+    width: 100px;
+    font-size: 15px;
+    padding: 6px 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    outline: none;
+  }
+    .search-icon {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  /* Hamburger icon — position to the right of search */
+  .navbar-toggle {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+
+    /* position it next to search bar */
+    position: absolute;
+    right: 20px;   /* stays at far right */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide center links initially */
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+}
+
+/* Tablets portrait (426px - 768px) */
+@media (min-width: 426px) and (max-width: 768px) {
+  /* Make navbar a proper flex container */
+  .navbar {
+     margin-left: 20px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    position: relative;
+  }
+
+  /* Keep navbar-right (search section) aligned right */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hide buttons */
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+
+  /* Style search bar */
+  .search-bar {
+    width: 160px;
+    font-size: 15px;
+    padding: 6px 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    outline: none;
+  }
+    .search-icon {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  /* Hamburger icon — position to the right of search */
+  .navbar-toggle {
+    display: block;
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+
+    /* position it next to search bar */
+    position: absolute;
+    right: 20px;   /* stays at far right */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide center links initially */
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+
+
+
+
+ 
+}
+
+/* Tablets landscape & small desktops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Desktop: show buttons only in navbar-right, hide in navbar-center */
+@media (min-width: 769px) {
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: none;
+  }
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: inline-block;
+  }
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
 }
 
+/* Mobile: hide buttons in navbar-right, show in navbar-center */
+@media (max-width: 768px) {
+ .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    border-top: 1px solid #eee;
+    z-index: 100;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+}
+
+/* Desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: none;
+  }
+  .navbar {
+    margin-left: 50px;
+    padding: 12px 18px;
+  }
+  .navbar-center {
+    gap: 40px;
+  }
+  .search-bar {
+    width: 200px;
+  }
+}
+
+/* Large desktops (1441px and up) */
+@media (min-width: 1441px) {
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: none;
+  }
+  .navbar {
+    margin-left: 60px;
+    padding: 12px 20px;
+  }
+  .navbar-center {
+    gap: 50px;
+  }
+  .search-bar {
+    width: 220px;
+  }
+}
+
+/* Responsive Navbar toggle logic */
+
+/* Hide the nav links and show hamburger on smaller screens */
+
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 100;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+  }
+  .navbar-center.active {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-right {
+    margin-right: 10px;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-meta {
+    margin-left: 0;
+  }
+  
+  .footer-logo .navbar-left img {
+    max-width: 120px;
+    margin: 0 auto;
+  }
+  
+  .footer-social {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .footer-social .fa {
+    font-size: 24px;
+    width: 30px;
+    height: 29px;
+    padding: 5px;
+    margin: 3px 4px;
+  }
+}
+
+/* Tablet landscape and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-content {
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .footer-meta {
+    margin-left: 0;
+  }
+  
+  .footer-logo .navbar-left img {
+    max-width: 140px;
+  }
+  .footer-social .fa {
+    font-size: 25px;
+  }
+}
+
+
+
+body{
+  
+  padding-bottom: env(safe-area-inset-bottom);
+
+  height: 100%;
+}
+main{
+  flex: 1
+;
+}
+
+
+
+@media (max-width: 900px) {
+  
   .main-container {
     max-width: 90%;
     padding: 20px 15px;
   }
-  .navbar {
-    margin-left: 10px;
-    padding: 10px 12px;
-  }
-  .navbar-center {
-    gap: 25px;
-  }
-  .navbar-left img {
-    height: 60px;
-    width: 70px;
-  }
-  .center-img {
+    .center-img {
     width: 350px;
     max-width: 100%;
   }
@@ -287,33 +677,12 @@
     font-size: 1.1rem;
     line-height: 1.6;
   }
-  .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-  .footer-meta {
-    margin-left: 0;
-    text-align: center;
-  }
 
+}
 
-
-/* Small screens (mobile phones and small tablets) */
 @media (max-width: 600px) {
-  
-    .navbar-center {
-    display: none; /* Hide center links to save space */
-  }
-  .navbar-right {
-    margin-right: 15px;
-    gap: 8px;
-  }
-  .navbar-left img {
-    height: 50px;
-    width: 60px;
-  }
-  .center-img {
+
+    .center-img {
     width: 90vw;
   }
   .side-img {
@@ -336,46 +705,10 @@
     font-size: 1rem;
     line-height: 1.5;
   }
-  .navbar-toggle {
-    display: block;
-    font-size: 24px;
-    cursor: pointer;
-    color: #264653;
-  }
-  /* When toggle is active, show menu */
-  .navbar-center.active {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 10px;
-    background: #fff;
-    width: 100%;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-  }
 }
-.footer-social .fa {
-    font-size: 32px;
-    width: 28px;
-    height: 30px;
-    padding: 5px;
-    margin: 3px 4px;
-  }
-  .footer-content {
-    padding: 0 10px;
-  }
-  .footer-meta {
-    font-size: 0.9rem;
-  }
-
-
-/* Extra small screens (very small mobiles) */
 @media (max-width: 400px) {
-  .navbar-left img {
-    height: 40px;
-    width: 50px;
-  }
-  .center-img {
+
+   .center-img {
     width: 95vw;
   }
   .side-img {
