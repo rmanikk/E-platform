@@ -24,10 +24,17 @@
       <a href="/team.html"> Our Team </a>
       <a href="books.html">Books</a>
       <a href="contact.html">Contact Us</a>
+       <button class="btn-signup">Sign Up</button>
+      <button class="btn-login">Login</button>
     </div>
+
+ <div class="navbar-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
+
     <div class="navbar-right">
-      <input class="search-bar" type="text" placeholder="Search Courses" />
-      <div class="search-icon">&#128269;</div>
+     
       <button class="btn-signup">Sign Up</button>
       <button class="btn-login">Login</button>
     </div>
@@ -44,7 +51,9 @@
     <button>Search</button>
   </div>
 </section>
-
+<div id="no-results" >
+  Sorry, No Blogs Found ! 
+</div>
 <div class="card-container">
      <div class="card">
       <img src="/Images/Blog Image/robinho.jpg" alt="Blog post image" class="card-image" />
@@ -55,7 +64,8 @@
           <div class="card-date">15 December, 2020</div>
           <p class="card-summary">
              On the football pitch, Robinho moves like a brush on a canvas, each dribble a stroke of brilliance. Defenders approach, but he glides past with a wink, a feint, a sudden burst of speed that leaves them grasping at air. It’s not just skill—it’s joy, creativity, and........
-          <a href="blog1.html" class="read-more-btn">Read more →</a>
+         </p>
+             <a href="blog1.html" class="read-more-btn">Read more →</a>
 
       </div>
       <img src="/Images/logo.png" class="card-logo" alt="Logo" />
@@ -69,6 +79,7 @@
           <div class="card-date">27 October, 2018</div>
           <p class="card-summary">
               Dreams have long captivated human curiosity. From ancient civilizations interpreting them as divine messages to modern scientists.........
+          </p>
           <a href="#" class="read-more-btn">Read more →</a>
 
       </div>
@@ -84,7 +95,7 @@
           <div class="card-date">11 December, 2018</div>
           <p class="card-summary">
              In the beginning, Earth was silent — a swirling sphere of fire and stone. Then came the rain, cooling the chaos, and from the ancient oceans, the first spark of life stirred. Tiny cells learned to breathe, to change..
-          <a href="#" class="read-more-btn">Read more →</a>
+          </p><a href="#" class="read-more-btn">Read more →</a>
       </div>
       <img src="/Images/logo.png" class="card-logo" alt="Logo" />
   </div>
@@ -98,7 +109,7 @@
           <div class="card-date">1 June, 2019</div>
           <p class="card-summary">
             Life is full of contradictions. Light cannot exist without darkness, joy feels deeper after sorrow, and strength often hides in vulnerability. In every paradox, there’s a quiet lesson: that opposing forces don’t cancel .....
-          <a href="#" class="read-more-btn">Read more →</a>
+          </p><a href="#" class="read-more-btn">Read more →</a>
 
       </div>
       <img src="/Images/logo.png" class="card-logo" alt="Logo" />
@@ -112,7 +123,7 @@
           <div class="card-date">12 September, 2019</div>
           <p class="card-summary">
              In the fog-choked streets of Victorian London, fear walked at night. A shadow known only as Jack the Ripper stalked Whitechapel, leaving behind a trail of mystery and horror. His victims were women on the margins of society, and the killer vanished........
-          <a href="#" class="read-more-btn">Read more →</a>
+          </p><a href="#" class="read-more-btn">Read more →</a>
 
       </div>
       <img src="/Images/logo.png" class="card-logo" alt="Logo" />
@@ -144,14 +155,21 @@
   </div>
 </footer>
 </main>
+  <script>
+  document.querySelector('.navbar-toggle').addEventListener('click', () => {
+  document.querySelector('.navbar-center').classList.toggle('active');
+});
+</script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const searchInput = document.getElementById('searchInput');
+     const noResults = document.getElementById('no-results');
     if (!searchInput) return;
 
     searchInput.addEventListener('input', function() {
       const filter = this.value.toLowerCase();
       const cards = document.querySelectorAll('.card');
+      let found = false;
 
       cards.forEach(card => {
         const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
@@ -159,10 +177,12 @@
 
         if (title.includes(filter) || summary.includes(filter)) {
           card.style.display = '';
+          found = true;
         } else {
           card.style.display = 'none';
         }
       });
+      noResults.style.display = found ? 'none' : 'block';
     });
   });
 </script>
