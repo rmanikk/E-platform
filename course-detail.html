@@ -8,8 +8,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/coursestyle.css" />
-<title>Course Detail</title>
-  <link rel="icon" href="/Images/logo.png" type="image/png">
+<title> Our Courses </title>
+<link rel="icon" href="/Images/logo.png" type="image/png">
 </head>
 <body>
   <main>
@@ -24,7 +24,14 @@
       <a href="/team.html">Our Team</a>
       <a href="books.html">Books</a>
       <a href="contact.html">Contact Us</a>
+      <button class="btn-signup">Sign Up</button>
+      <button class="btn-login">Login</button>
     </div>
+    
+     <div class="navbar-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
     <div class="navbar-right">
       <input class="search-bar" type="text" placeholder="Search Courses" />
       <div class="search-icon">&#128269;</div>
@@ -32,7 +39,7 @@
       <button class="btn-login">Login</button>
     </div>
   </nav>
-
+ 
    <section class="explore-section">
   <div class="explore-header">
     <h1> Courses We Offer </h1>
@@ -56,6 +63,9 @@
     <div class="category" data-category="photo">Photography</div>
     <div class="category" data-category="plus2">+2 (Science)</div>
   </div>
+    <div id="no-results" >
+  Sorry, No Courses Found ! 
+</div>
   <div class="courses-carousel">
     <div class="course-card" data-category="see">
       <img src="/Images/Course Demo View/see 10/see maths.jpeg" alt="Course 1" class="course-image" />
@@ -150,10 +160,110 @@
 </div>
   </div>
 </footer>
+  <script>
+  document.querySelector('.navbar-toggle').addEventListener('click', () => {
+  document.querySelector('.navbar-center').classList.toggle('active');
+});
+</script>
+<script>
+  const slider = document.querySelector(".categories");
+let isDown = false;
+let startX;
+let scrollLeft;
 
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");  // optional styling while dragging
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2; // scroll-fast factor
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+</script>
+<script>
+  
+</script>
 <script src="coursesfilter.js"></script>
 
 </main>
+<script>
+  
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.querySelector('.search-bar'); // use your search input class
+  const searchBtn = document.querySelector('.search-icon'); 
+   const noResults = document.getElementById('no-results'); // use your search icon as button
+  if (!searchInput || !searchBtn) return;
+
+  const cards = document.querySelectorAll('.course-card');
+
+  function performSearch() {
+    const filter = searchInput.value.toLowerCase().trim();
+     let found = false;
+
+    // If search is blank, show all cards
+    if (!filter) {
+      cards.forEach(card => (card.style.display = ''));
+      noResults.style.display = 'none';
+      return;
+    }
+
+    // Filter cards based on course title
+    cards.forEach(card => {
+      const title = card.querySelector('.course-title')?.textContent.toLowerCase() || '';
+
+      if (title.includes(filter)) {
+        card.style.display = '';
+         found = true;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+     noResults.style.display = found ? 'none' : 'block';
+  }
+
+  // Trigger search on button click
+  searchBtn.addEventListener('click', performSearch);
+
+  // Trigger search on Enter key
+  searchInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      performSearch();
+    }
+  });
+
+  // Automatically restore when search bar is cleared
+  searchInput.addEventListener('input', function() {
+    if (this.value.trim() === '') {
+      cards.forEach(card => (card.style.display = ''));
+       noResults.style.display = 'none';
+    }
+  });
+});
+</script>
+<script>
+document.querySelectorAll('.course-card').forEach(card => {
+  card.addEventListener('click', () => {
+    // Redirect all courses to login.html
+    window.location.href = "login.html";
+  });
+});
+
+</script>
+
+
 </body>
 </html>
-
