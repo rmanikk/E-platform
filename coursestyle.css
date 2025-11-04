@@ -268,3 +268,766 @@
 .footer-social .fa-twitter { background: #55acee; }
 .footer-social .fa-instagram { background: #db546d; }
 .footer-social .fa-linkedin { background: #5ab8eb; }
+
+.navbar-toggle {
+  display: none;
+}
+
+
+
+/* Small phones and smaller (up to 320px) */
+@media (max-width: 351px) {
+.navbar {
+  margin-left: 10px;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  /* Keep navbar-right (search section) aligned right */
+  .navbar-right {
+    
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hide buttons */
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+
+  /* Style search bar */
+  .search-bar {
+    width: 70px;
+    font-size: 15px;
+    padding: 6px 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    outline: none;
+  }
+    .search-icon {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  /* Hamburger icon — position to the right of search */
+  .navbar-toggle {
+    display: block;
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+
+    /* position it next to search bar */
+    position: absolute;
+    right: 20px;   /* stays at far right */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide center links initially */
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+}
+
+/* Small phones to larger phones (321px - 425px) */
+@media (min-width: 352px) and (max-width: 425px) {
+.navbar {
+    display: flex;
+    
+    margin-left: 15px;
+    padding: 8px 12px;
+  
+    justify-content: space-between;
+    padding: 10px 20px;
+    position: relative;
+  }
+
+  /* Keep navbar-right (search section) aligned right */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hide buttons */
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+
+  /* Style search bar */
+  .search-bar {
+    width: 100px;
+    font-size: 15px;
+    padding: 6px 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    outline: none;
+  }
+    .search-icon {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  /* Hamburger icon — position to the right of search */
+  .navbar-toggle {
+    display: block;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+
+    /* position it next to search bar */
+    position: absolute;
+    right: 20px;   /* stays at far right */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide center links initially */
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+}
+
+/* Tablets portrait (426px - 768px) */
+@media (min-width: 426px) and (max-width: 768px) {
+  /* Make navbar a proper flex container */
+  .navbar {
+     margin-left: 20px;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    position: relative;
+  }
+
+  /* Keep navbar-right (search section) aligned right */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Hide buttons */
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+
+  /* Style search bar */
+  .search-bar {
+    width: 160px;
+    font-size: 15px;
+    padding: 6px 10px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    outline: none;
+  }
+    .search-icon {
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  /* Hamburger icon — position to the right of search */
+  .navbar-toggle {
+    display: block;
+    font-size: 22px;
+    color: #000;
+    cursor: pointer;
+
+    /* position it next to search bar */
+    position: absolute;
+    right: 20px;   /* stays at far right */
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* Hide center links initially */
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+
+
+
+
+ 
+}
+
+/* Tablets landscape & small desktops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Desktop: show buttons only in navbar-right, hide in navbar-center */
+@media (min-width: 769px) {
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: none;
+  }
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: inline-block;
+  }
+  .navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+/* Mobile: hide buttons in navbar-right, show in navbar-center */
+@media (max-width: 768px) {
+ .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    border-top: 1px solid #eee;
+    z-index: 100;
+  }
+
+  .navbar-center.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+}
+
+/* Desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: none;
+  }
+  .navbar {
+    margin-left: 50px;
+    padding: 12px 18px;
+  }
+  .navbar-center {
+    gap: 40px;
+  }
+  .search-bar {
+    width: 200px;
+  }
+}
+
+/* Large desktops (1441px and up) */
+@media (min-width: 1441px) {
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: none;
+  }
+  .navbar {
+    margin-left: 60px;
+    padding: 12px 20px;
+  }
+  .navbar-center {
+    gap: 50px;
+  }
+  .search-bar {
+    width: 220px;
+  }
+}
+
+/* Responsive Navbar toggle logic */
+
+/* Hide the nav links and show hamburger on smaller screens */
+
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 100;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+  }
+  .navbar-center.active {
+    display: flex;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-right {
+    margin-right: 10px;
+  }
+  .navbar {
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-meta {
+    margin-left: 0;
+  }
+  
+  .footer-logo .navbar-left img {
+    max-width: 120px;
+    margin: 0 auto;
+  }
+  
+  .footer-social {
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .footer-social .fa {
+    font-size: 24px;
+    width: 30px;
+    height: 29px;
+    padding: 5px;
+    margin: 3px 4px;
+  }
+}
+
+/* Tablet landscape and small desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-content {
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .footer-meta {
+    margin-left: 0;
+  }
+  
+  .footer-logo .navbar-left img {
+    max-width: 140px;
+  }
+  .footer-social .fa {
+    font-size: 25px;
+  }
+}
+
+
+
+body{
+  
+  padding-bottom: env(safe-area-inset-bottom);
+
+  height: 100%;
+}
+main{
+  flex: 1
+;
+}
+
+
+/* ========== Responsive Explore Section and Courses ========== */
+
+/* Small screens (phones, up to 480px) */
+@media (max-width: 480px) {
+  .explore-header h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .explore-header h3 {
+    font-size: 1rem;
+    text-align: justify;
+    padding: 0 10px;
+  }
+
+  .categories {
+    gap: 8px;
+    overflow-x: auto;
+    padding: 5px 0;
+  }
+
+  .category {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .courses-carousel {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-card {
+    max-width: 95%;
+    width: 95%;
+  }
+
+  .course-image {
+    height: 160px;
+  }
+
+  .course-title {
+    font-size: 1rem;
+  }
+
+  .course-desc {
+    font-size: 0.85rem;
+  }
+}
+
+/* Tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .explore-header h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .explore-header h3 {
+    font-size: 1.05rem;
+    padding: 0 15px;
+    text-align: justify;
+  }
+
+  .categories {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .course-card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .course-image {
+    height: 170px;
+  }
+}
+
+/* Laptops / small desktops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .explore-section {
+    width: 95%;
+  }
+
+  .categories {
+     flex-wrap: nowrap;        /* Prevent wrapping */
+  overflow-x: auto;         /* Allow horizontal scroll */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+   
+    gap: 10px;
+  }
+
+  .course-card {
+    flex: 1 1 calc(33.33% - 20px);
+    max-width: calc(33.33% - 20px);
+  }
+
+  .course-image {
+    height: 180px;
+  }
+}
+
+/* Large desktops (1025px and up) */
+@media (min-width: 1025px) {
+  .courses-carousel {
+    justify-content: flex-start;
+  }
+
+  .course-card {
+    flex: 1 1 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+  }
+}
+/* ---------- Responsive Category Scrolling ---------- */
+
+/* Base improvements */
+/* ---------- Universal Horizontal Scrolling for Categories ---------- */
+
+
+/* Category chip styling (looks neat across all screen sizes) */
+.category {
+  flex: 0 0 auto;
+  padding: 10px 16px;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  color: #555;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category:hover {
+  background-color: #e6e6e6;
+}
+
+.category.active {
+  background-color: #d4dcff;
+  color: #263dfe;
+}
+
+
+/* On smaller screens, make categories scroll horizontally and full-width */
+@media (max-width: 768px) {
+  .categories {
+    justify-content: flex-start;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+
+  .category {
+    flex: 0 0 auto;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background-color: #f7f7f7;
+  }
+
+  .category.active {
+    background-color: #d4dcff;
+    color: #263dfe;
+  }
+}
+
+/* Tablets and up — categories wrap into rows */
+@media (min-width: 769px) {
+  .categories {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    justify-content: center;
+  }
+
+  .category {
+    flex: 0 1 auto;
+  }
+}
+
+
+
+
+
+/* ---------- Universal Horizontal Scrolling for Categories ---------- */
+
+.categories {
+  display: flex;
+  flex-wrap: nowrap;        /* Keep in one line */
+  overflow-x: auto;         /* Enable horizontal scroll */
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  gap: 14px;
+  padding: 10px 0;
+  white-space: nowrap;
+  justify-content: flex-start;
+  scrollbar-width: thin;          /* Firefox scrollbar */
+  scrollbar-color: #c5c5c5 transparent;
+}
+
+/* Webkit scrollbar (Chrome, Edge, Safari) */
+.categories::-webkit-scrollbar {
+  height: 8px;
+}
+.categories::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 10px;
+}
+.categories::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Category chip style */
+.category {
+  flex: 0 0 auto;
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.category:hover {
+  background-color: #e6e6e6;
+}
+
+.category.active {
+  background-color: #d4dcff;
+  color: #263dfe;
+}
+
+/* -------- Optional: Responsive adjustments -------- */
+
+/* For small screens - tighter spacing */
+@media (max-width: 600px) {
+  .categories {
+    gap: 10px;
+    padding: 8px 0;
+  }
+  .category {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+}
+
+/* For very large screens - center the bar if everything fits */
+@media (min-width: 1440px) {
+  .categories {
+    flex-wrap: nowrap;       /* Keep items in one row */
+    overflow-x: auto;        /* Always allow horizontal scroll */
+    justify-content: flex-start;  /* Keep items left-aligned */
+    scrollbar-width: thin;   /* Firefox scrollbar */
+    padding: 10px 0;
+  }
+
+  /* Webkit scrollbar (Chrome, Safari, Edge) */
+  .categories::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .categories::-webkit-scrollbar-thumb {
+    background-color: #bcbcbc;
+    border-radius: 4px;
+  }
+
+  .categories::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+
+
+@media (min-width: 769px) and (max-width:1089px) {
+  .navbar-right .btn-signup,
+  .navbar-right .btn-login {
+    display: none;
+  }
+  .navbar-center .btn-signup,
+  .navbar-center .btn-login {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    border-top: 1px solid #eee;
+    z-index: 100;
+       align-items: center;
+    text-align: center;
+  }
+ .navbar-center a {
+    width: 90%;           /* Make links take most of the width */
+    margin: 6px 0;        /* vertical spacing between links */
+    text-align: center;   /* Center text */
+  }
+  .navbar-center.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+     position: absolute;
+      right: 20px;          /* Align to the right side */
+               /* Vertically center relative to navbar */
+    
+    cursor: pointer;
+  }
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+}
+
+#no-results {
+  display:none; 
+  text-align:center; 
+  margin:20px;
+   font-size:1.4em; 
+   color:#2a9d8f;
+}
