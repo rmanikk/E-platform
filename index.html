@@ -362,6 +362,16 @@ slider.addEventListener("mousemove", (e) => {
 <script src="script.js"></script>
 <script src="coursesfilter.js"></script>
 </main>
+  <script>
+document.querySelectorAll('.course-card').forEach(card => {
+  card.addEventListener('click', () => {
+    // Redirect all courses to login.html
+    window.location.href = "login.html";
+  });
+});
+
+</script>
 </body>
 </html>
+
 
