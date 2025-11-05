@@ -1275,7 +1275,7 @@ main{
     display: grid;
     grid-template-columns: 1fr; /* one column per row */
     gap: 15px;
-    max-height: 300px;
+    max-height: 500px;
    overflow-y: auto; 
   }
 
@@ -1290,3 +1290,4 @@ main{
     overflow: hidden; /* hide extra text */
   }
 }
+
