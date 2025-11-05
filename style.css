@@ -1159,11 +1159,11 @@ main{
   .explore-section h1,
   .books-header h1,
   .testimonial-section h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   .view-all {
-    font-size: 1rem;
+    font-size: 0.9rem;
     
   }
 }
@@ -1271,6 +1271,18 @@ main{
 @media (max-width: 768px) {
   
 
+  .explore-section h1,
+  .books-header h1,
+  .testimonial-section h2 
+  {
+    font-size: 1.3rem;
+  }
+  .book-description {
+    font-size: 1rem;
+  }
+.view-all {
+  font-size: 0.9rem;
+}
   .courses-carousel {
     display: grid;
     grid-template-columns: 1fr; /* one column per row */
@@ -1290,4 +1302,3 @@ main{
     overflow: hidden; /* hide extra text */
   }
 }
-
