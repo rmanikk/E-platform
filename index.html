@@ -5,11 +5,12 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title> Anpadd </title>
-  <link rel="icon" href="/Images/logo.png" type="image/png">
+<link rel="icon" href="/Images/logo.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
+<link rel="icon" href="/Images/logo.png" type="image/png">
 </head>
 <body>
   <main>
@@ -24,10 +25,17 @@
       <a href="/team.html"> Our Team </a>
       <a href="/books.html">Books</a>
       <a href="/contact.html">Contact Us</a>
+       <button class="btn-signup">Sign Up</button>
+      <button class="btn-login">Login</button>
     </div>
+
+      
+     <div class="navbar-toggle">
+    <i class="fa fa-bars"></i>
+  </div>
+
     <div class="navbar-right">
-      <input class="search-bar" type="text" placeholder="Search Courses" />
-      <div class="search-icon">&#128269;</div>
+    
       <button class="btn-signup">Sign Up</button>
       <button class="btn-login">Login</button>
     </div>
@@ -317,10 +325,42 @@
 </div>
   </div>
 </footer>
+  <script>
+  document.querySelector('.navbar-toggle').addEventListener('click', () => {
+  document.querySelector('.navbar-center').classList.toggle('active');
+});
+</script>
+<script>
+  const slider = document.querySelector(".categories");
+let isDown = false;
+let startX;
+let scrollLeft;
 
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");  // optional styling while dragging
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 2; // scroll-fast factor
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+</script>
 <script src="script.js"></script>
 <script src="coursesfilter.js"></script>
 </main>
 </body>
 </html>
-
