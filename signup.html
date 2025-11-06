@@ -1,100 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sign Up | Anpadd</title>
-  <link rel="stylesheet" href="auth.css" />
-  <style>
-    /* Inline error messages */
-    .error-msg {
-      color: #e63946;
-      font-size: 13px;
-      margin-top: -12px;
-      margin-bottom: 10px;
-      display: none;
-    }
-  </style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up | Anpadd</title>
+    <link rel="stylesheet" href="/styles/auth.css" />
+    <style>
+      /* Inline error messages */
+      .error-msg {
+        color: #e63946;
+        font-size: 13px;
+        margin-top: -12px;
+        margin-bottom: 10px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Sign Up</h2>
 
-<div class="auth-container">
-  <h2>Sign Up</h2>
-  
-  <input type="text" id="name" placeholder="Full Name" required />
-  <div id="nameError" class="error-msg">Please enter a valid name (letters & spaces, 2-50 chars).</div>
+      <input type="text" id="name" placeholder="Full Name" required />
+      <div id="nameError" class="error-msg">
+        Please enter a valid name (letters & spaces, 2-50 chars).
+      </div>
 
-  <input type="email" id="email" placeholder="Email" required />
-  <div id="emailError" class="error-msg">Please enter a valid email address.</div>
+      <input type="email" id="email" placeholder="Email" required />
+      <div id="emailError" class="error-msg">
+        Please enter a valid email address.
+      </div>
 
-  <input type="password" id="password" placeholder="Password" required />
-  <div id="passwordError" class="error-msg">Password must be at least 6 characters long.</div>
+      <input type="password" id="password" placeholder="Password" required />
+      <div id="passwordError" class="error-msg">
+        Password must be at least 6 characters long.
+      </div>
 
-  <button id="signupBtn">Sign Up</button>
-  <a href="login.html" class="auth-link">Already have an account? Login</a>
-</div>
+      <button id="signupBtn">Sign Up</button>
+      <a href="login.html" class="auth-link">Already have an account? Login</a>
+    </div>
 
-<script>
-const signupBtn = document.getElementById('signupBtn');
+    <script>
+      const signupBtn = document.getElementById("signupBtn");
 
-signupBtn.addEventListener('click', () => {
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value.trim();
+      signupBtn.addEventListener("click", () => {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-  const nameError = document.getElementById('nameError');
-  const emailError = document.getElementById('emailError');
-  const passwordError = document.getElementById('passwordError');
+        const nameError = document.getElementById("nameError");
+        const emailError = document.getElementById("emailError");
+        const passwordError = document.getElementById("passwordError");
 
-  let valid = true;
+        let valid = true;
 
-  // Name validation
-  const nameRegex = /^[a-zA-Z ]{2,50}$/;
-  if(!nameRegex.test(name)){
-    nameError.style.display = 'block';
-    valid = false;
-  } else {
-    nameError.style.display = 'none';
-  }
+        // Name validation
+        const nameRegex = /^[a-zA-Z ]{2,50}$/;
+        if (!nameRegex.test(name)) {
+          nameError.style.display = "block";
+          valid = false;
+        } else {
+          nameError.style.display = "none";
+        }
 
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if(!emailRegex.test(email)){
-    emailError.style.display = 'block';
-    valid = false;
-  } else {
-    emailError.style.display = 'none';
-  }
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          emailError.style.display = "block";
+          valid = false;
+        } else {
+          emailError.style.display = "none";
+        }
 
-  // Password validation
-  if(password.length < 6){
-    passwordError.style.display = 'block';
-    valid = false;
-  } else {
-    passwordError.style.display = 'none';
-  }
+        // Password validation
+        if (password.length < 6) {
+          passwordError.style.display = "block";
+          valid = false;
+        } else {
+          passwordError.style.display = "none";
+        }
 
-  if(!valid) return;
+        if (!valid) return;
 
-  // Get users from localStorage
-  const users = JSON.parse(localStorage.getItem('users')) || [];
+        // Get users from localStorage
+        const users = JSON.parse(localStorage.getItem("users")) || [];
 
-  // Check if user exists
-  if(users.some(u => u.email === email)){
-    emailError.textContent = 'User already exists';
-    emailError.style.display = 'block';
-    return;
-  }
+        // Check if user exists
+        if (users.some((u) => u.email === email)) {
+          emailError.textContent = "User already exists";
+          emailError.style.display = "block";
+          return;
+        }
 
-  // Add new user
-  const newUser = { name, email, password, role: 'user' };
-  users.push(newUser);
-  localStorage.setItem('users', JSON.stringify(users));
+        // Add new user
+        const newUser = { name, email, password, role: "user" };
+        users.push(newUser);
+        localStorage.setItem("users", JSON.stringify(users));
 
-  // Redirect to login page
-  window.location.href = 'login.html';
-});
-</script>
-
-</body>
+        // Redirect to login page
+        window.location.href = "login.html";
+      });
+    </script>
+  </body>
 </html>

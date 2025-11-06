@@ -1,0 +1,82 @@
+.navbar {
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 18px;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.navbar-left img {
+  height: 70px;
+  width: 80px;
+}
+
+.navbar-center {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-center a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 16px;
+}
+.navbar-center a:hover,
+.navbar-center a.active {
+  font-weight: 500;
+  color: #2a9d8f;
+}
+.navbar-right {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Hide the menu on smaller screens */
+@media (max-width: 768px) {
+  .navbar-center {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px; /* below the navbar */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+
+    z-index: 1000;
+  }
+
+  /* Show when active */
+  .navbar-center.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar-right {
+    display: none; /* Hide duplicate buttons on mobile */
+  }
+  .btn-signup {
+    display: inline-block;
+  }
+}
+
+/* Hide toggle button on desktop */
+@media (min-width: 769px) {
+  .navbar-toggle {
+    display: none;
+  }
+}

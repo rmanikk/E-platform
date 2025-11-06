@@ -1,208 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Books | Anpadd</title>
-  <link rel="icon" href="/Images/logo.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="books.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <nav class="navbar">
-    <div class="navbar-left">
-      <img src="/Images/logo.png" alt="Logo" />
-    </div>
-    <div class="navbar-center">
-      <a href="/index.html">Home</a>
-      <a href="/course-detail.html">Our Courses</a>
-      <a href="/blog.html">Blogs</a>
-      <a href="/team.html">Our Team</a>
-      <a href="#" class="active">Books</a>
-      <a href="contact.html">Contact Us</a>
-      <button class="btn-signup">Sign Up</button>
-      <button class="btn-login">Login</button>
-    </div>
-    
-     <div class="navbar-toggle">
-    <i class="fa fa-bars"></i>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books | Anpadd</title>
+    <link rel="icon" href="/Images/logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/styles/books.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-    <div class="navbar-right">
-      <input class="search-bar" type="text" id="searchInput" placeholder="Search Books" />
-      <div class="search-icon" id="searchBtn">&#128269;</div>
-      <button class="btn-signup">Sign Up</button>
-      <button class="btn-login">Login</button>
-     
-      </div>
-    </div>
-  </nav>
-
-  <main>
-   <div class="bookshelf">
-  <h1 class="books-title">Featured Books</h1>
-  <div class="book-grid">
-    <div class="book-card">
-      <img src="/Images/Books Images/The Trial.jpg" alt="Book Cover 1">
-      <div class="book-info">
-        <h2>The Trial </h2>
-        <p class="author">by Franz Kafka </p>
-        <p class="desc">A haunting tale of Joseph K., who is arrested and prosecuted by a mysterious authority for an unspecified crime. A classic exploration of bureaucracy....</p>
-        <a href="https://www.gutenberg.org/cache/epub/7849/pg7849-images.html" target="_blank" class="read-full-btn">Read Full Book</a>
-    </div>
-    </div>
-    <div class="book-card">
-      <img src="/Images/Books Images/The Castle.jpg" alt="Book Cover 1">
-      <div class="book-info">
-        <h2>The Castle </h2>
-        <p class="author">by Franz Kafka </p>
-        <p class="desc">A surreal novel about K., a land surveyor trying to gain access to a mysterious castle, symbolizing the absurdity and opacity of authority and bureaucracy.</p>
-        <a href="" target="_blank" class="read-full-btn">Read Full Book</a>
-    </div>
-    </div>
-     <div class="book-card">
-      <img src="/Images/Books Images/Crime and Punishment.jpeg" alt="Book Cover 3">
-      <div class="book-info">
-        <h2>Crime and Punishment</h2>
-        <p class="author">by  Fyodor Dostoyevsky</p>
-        <p class="desc">Prince Myshkin, a man of pure goodness, returns to society and confronts corruption, greed, and idealism.</p>
-          <a href="https://www.gutenberg.org/cache/epub/2554/pg2554-images.html" target="_blank" class="read-full-btn">Read Full Book</a>
-      </div>
-    </div>
-    <div class="book-card">
-      <img src="/Images/Books Images/The Tempest.jpg" alt="Book Cover 4">
-      <div class="book-info">
-        <h2>The Tempest</h2>
-        <p class="author">by  William Shakespeare</p>
-        <p class="desc">A detached man, Meursault, faces life, death, and societal judgment after committing a murder, exploring existentialism and alienation and the life....</p>
-        <a href="https://www.gutenberg.org/cache/epub/23042/pg23042-images.html" target="_blank" class="read-full-btn">Read Full Book</a>
-      </div>
-    </div>
-    <div class="book-card">
-      <img src="/Images/Books Images/The Metamorphosis.jpeg" alt="Book Cover 1">
-      <div class="book-info">
-        <h2>The Metamorphosis </h2>
-        <p class="author">by Franz Kafka </p>
-        <p class="desc">The story of Raskolnikov, a student who commits murder and grapples with guilt, morality, and redemption. A masterpiece of psychological realism.</p>
-        <a href="https://www.gutenberg.org/cache/epub/5200/pg5200-images.html" target="_blank" class="read-full-btn">Read Full Book</a>
-    </div>
-    </div>
-     <div class="book-card">
-      <img src="/Images/Books Images/The Idiot.jpg" alt="Book Cover 3">
-      <div class="book-info">
-        <h2>The Idiot</h2>
-        <p class="author">by  Fyodor Dostoyevsky</p>
-        <p class="desc">A magical story of shipwrecks, revenge, and reconciliation, featuring the sorcerer Prospero and the spirit Ariel and the way of interpreting realism into..</p>
-          <a href="https://www.gutenberg.org/cache/epub/2638/pg2638-images.html" target="_blank" class="read-full-btn">Read Full Book</a>
-      </div>
-    </div>
-    
-   
-    
-
-     <div class="book-card">
-      <img src="/Images/Books Images/The Stranger.jpg" alt="Book Cover 4">
-      <div class="book-info">
-        <h2>The Stranger</h2>
-        <p class="author">by  Albert Camus</p>
-        <p class="desc">A deadly epidemic hits the city of Oran, forcing its residents to face human suffering, moral responsibility, and the absurdity of life........</p>
-        <a href="" target="_blank" class="read-full-btn">Read Full Book</a>
-      </div>
-    </div>
-    <!-- Add more .book-card as needed -->
-  </div>
-</div>
-
-  </main>
-
-      <footer class="main-footer">
-  <div class="footer-content">
-    <div class="footer-logo">
+  <body>
+    <nav class="navbar">
       <div class="navbar-left">
-      <img src="/Images/logo.png" alt="Logo" />
-    </div>
-    </div>
-     <div class="footer-meta">
-    &copy; 2025 Anpadd. All rights reserved.
-  </div>
-    <div class="footer-social">
-  <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
-  <a href="#" class="fa fa-twitter" aria-label="Twitter"></a>
-  <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
-  <a href="#" class="fa fa-linkedin" aria-label="LinkedIn"></a>
-</div>
-  </div>
-</footer>
-  <script>
-  document.querySelector('.navbar-toggle').addEventListener('click', () => {
-  document.querySelector('.navbar-center').classList.toggle('active');
-});
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const searchInput = document.getElementById('searchInput');
-  const searchBtn = document.getElementById('searchBtn');
-  if (!searchInput || !searchBtn) return;
+        <img src="/Images/logo.png" alt="Logo" />
+      </div>
+      <div class="navbar-center">
+        <a href="/index.html">Home</a>
+        <a href="/course-detail.html">Our Courses</a>
+        <a href="/blog.html">Blogs</a>
+        <a href="/team.html">Our Team</a>
+        <a href="#" class="active">Books</a>
+        <a href="contact.html">Contact Us</a>
+        <button class="btn-signup">Sign Up</button>
+        <button class="btn-login">Login</button>
+      </div>
 
-  const cards = document.querySelectorAll('.book-card');
+      <div class="navbar-toggle">
+        <i class="fa fa-bars"></i>
+      </div>
 
-  function performSearch() {
-    const filter = searchInput.value.toLowerCase().trim();
+      <div class="navbar-right">
+        <input
+          class="search-bar"
+          type="text"
+          id="searchInput"
+          placeholder="Search Books"
+        />
+        <div class="search-icon" id="searchBtn">&#128269;</div>
+        <button class="btn-signup">Sign Up</button>
+        <button class="btn-login">Login</button>
+      </div>
+    </nav>
 
-    // If search is blank, show all cards
-    if (!filter) {
-      cards.forEach(card => (card.style.display = ''));
-      return;
-    }
+    <main>
+      <div class="bookshelf">
+        <h1 class="books-title">Featured Books</h1>
+        <div class="book-grid">
+          <div class="book-card">
+            <img src="/Images/Books Images/The Trial.jpg" alt="Book Cover 1" />
+            <div class="book-info">
+              <h2>The Trial</h2>
+              <p class="author">by Franz Kafka</p>
+              <p class="desc">
+                A haunting tale of Joseph K., who is arrested and prosecuted by
+                a mysterious authority for an unspecified crime. A classic
+                exploration of bureaucracy....
+              </p>
+              <a
+                href="https://www.gutenberg.org/cache/epub/7849/pg7849-images.html"
+                target="_blank"
+                class="read-full-btn"
+                >Read Full Book</a
+              >
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="/Images/Books Images/The Castle.jpg" alt="Book Cover 1" />
+            <div class="book-info">
+              <h2>The Castle</h2>
+              <p class="author">by Franz Kafka</p>
+              <p class="desc">
+                A surreal novel about K., a land surveyor trying to gain access
+                to a mysterious castle, symbolizing the absurdity and opacity of
+                authority and bureaucracy.
+              </p>
+              <a href="" target="_blank" class="read-full-btn"
+                >Read Full Book</a
+              >
+            </div>
+          </div>
+          <div class="book-card">
+            <img
+              src="/Images/Books Images/Crime and Punishment.jpeg"
+              alt="Book Cover 3"
+            />
+            <div class="book-info">
+              <h2>Crime and Punishment</h2>
+              <p class="author">by Fyodor Dostoyevsky</p>
+              <p class="desc">
+                Prince Myshkin, a man of pure goodness, returns to society and
+                confronts corruption, greed, and idealism.
+              </p>
+              <a
+                href="https://www.gutenberg.org/cache/epub/2554/pg2554-images.html"
+                target="_blank"
+                class="read-full-btn"
+                >Read Full Book</a
+              >
+            </div>
+          </div>
+          <div class="book-card">
+            <img
+              src="/Images/Books Images/The Tempest.jpg"
+              alt="Book Cover 4"
+            />
+            <div class="book-info">
+              <h2>The Tempest</h2>
+              <p class="author">by William Shakespeare</p>
+              <p class="desc">
+                A detached man, Meursault, faces life, death, and societal
+                judgment after committing a murder, exploring existentialism and
+                alienation and the life....
+              </p>
+              <a
+                href="https://www.gutenberg.org/cache/epub/23042/pg23042-images.html"
+                target="_blank"
+                class="read-full-btn"
+                >Read Full Book</a
+              >
+            </div>
+          </div>
+          <div class="book-card">
+            <img
+              src="/Images/Books Images/The Metamorphosis.jpeg"
+              alt="Book Cover 1"
+            />
+            <div class="book-info">
+              <h2>The Metamorphosis</h2>
+              <p class="author">by Franz Kafka</p>
+              <p class="desc">
+                The story of Raskolnikov, a student who commits murder and
+                grapples with guilt, morality, and redemption. A masterpiece of
+                psychological realism.
+              </p>
+              <a
+                href="https://www.gutenberg.org/cache/epub/5200/pg5200-images.html"
+                target="_blank"
+                class="read-full-btn"
+                >Read Full Book</a
+              >
+            </div>
+          </div>
+          <div class="book-card">
+            <img src="/Images/Books Images/The Idiot.jpg" alt="Book Cover 3" />
+            <div class="book-info">
+              <h2>The Idiot</h2>
+              <p class="author">by Fyodor Dostoyevsky</p>
+              <p class="desc">
+                A magical story of shipwrecks, revenge, and reconciliation,
+                featuring the sorcerer Prospero and the spirit Ariel and the way
+                of interpreting realism into..
+              </p>
+              <a
+                href="https://www.gutenberg.org/cache/epub/2638/pg2638-images.html"
+                target="_blank"
+                class="read-full-btn"
+                >Read Full Book</a
+              >
+            </div>
+          </div>
 
-    // Filter cards based on title or author
-    cards.forEach(card => {
-      const title = card.querySelector('h2')?.textContent.toLowerCase() || '';
-      const author = card.querySelector('.author')?.textContent.toLowerCase() || '';
+          <div class="book-card">
+            <img
+              src="/Images/Books Images/The Stranger.jpg"
+              alt="Book Cover 4"
+            />
+            <div class="book-info">
+              <h2>The Stranger</h2>
+              <p class="author">by Albert Camus</p>
+              <p class="desc">
+                A deadly epidemic hits the city of Oran, forcing its residents
+                to face human suffering, moral responsibility, and the absurdity
+                of life........
+              </p>
+              <a href="" target="_blank" class="read-full-btn"
+                >Read Full Book</a
+              >
+            </div>
+          </div>
+          <!-- Add more .book-card as needed -->
+        </div>
+      </div>
+    </main>
 
-      if (title.includes(filter) || author.includes(filter)) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-  }
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="navbar-left">
+            <img src="/Images/logo.png" alt="Logo" />
+          </div>
+        </div>
+        <div class="footer-meta">&copy; 2025 Anpadd. All rights reserved.</div>
+        <div class="footer-social">
+          <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
+          <a href="#" class="fa fa-twitter" aria-label="Twitter"></a>
+          <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
+          <a href="#" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.querySelector(".navbar-toggle").addEventListener("click", () => {
+        document.querySelector(".navbar-center").classList.toggle("active");
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchInput");
+        const searchBtn = document.getElementById("searchBtn");
+        if (!searchInput || !searchBtn) return;
 
-  // Trigger search on button click
-  searchBtn.addEventListener('click', performSearch);
+        const cards = document.querySelectorAll(".book-card");
 
-  // Trigger search on Enter key
-  searchInput.addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') {
-      performSearch();
-    }
-  });
+        function performSearch() {
+          const filter = searchInput.value.toLowerCase().trim();
 
-  // Automatically restore when search bar is cleared
-  searchInput.addEventListener('input', function() {
-    if (this.value.trim() === '') {
-      cards.forEach(card => (card.style.display = ''));
-    }
-  });
-});
-</script>
-  <script>
-  document.querySelectorAll('.read-full-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-  
+          // If search is blank, show all cards
+          if (!filter) {
+            cards.forEach((card) => (card.style.display = ""));
+            return;
+          }
 
-      window.location.href = "/login.html"; // redirect to login page
-    
-  });
-});
-</script>
+          // Filter cards based on title or author
+          cards.forEach((card) => {
+            const title =
+              card.querySelector("h2")?.textContent.toLowerCase() || "";
+            const author =
+              card.querySelector(".author")?.textContent.toLowerCase() || "";
 
-  
-</body>
+            if (title.includes(filter) || author.includes(filter)) {
+              card.style.display = "";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        }
+
+        // Trigger search on button click
+        searchBtn.addEventListener("click", performSearch);
+
+        // Trigger search on Enter key
+        searchInput.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") {
+            performSearch();
+          }
+        });
+
+        // Automatically restore when search bar is cleared
+        searchInput.addEventListener("input", function () {
+          if (this.value.trim() === "") {
+            cards.forEach((card) => (card.style.display = ""));
+          }
+        });
+      });
+    </script>
+    <script>
+      document.querySelectorAll(".read-full-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          window.location.href = "/login.html"; // redirect to login page
+        });
+      });
+    </script>
+  </body>
 </html>
-
-
-

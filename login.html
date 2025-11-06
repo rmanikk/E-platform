@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login | Anpadd</title>
-  <link rel="stylesheet" href="/auth.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Anpadd</title>
+    <link rel="stylesheet" href="/styles/auth.css" />
+  </head>
+  <body>
+    <div class="auth-container">
+      <h2>Login</h2>
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button id="loginBtn">Login</button>
+      <a href="signup.html" class="auth-link">Don't have an account? Sign Up</a>
+    </div>
 
-<div class="auth-container">
-  <h2>Login</h2>
-  <input type="email" id="email" placeholder="Email" required />
-  <input type="password" id="password" placeholder="Password" required />
-  <button id="loginBtn">Login</button>
-  <a href="signup.html" class="auth-link">Don't have an account? Sign Up</a>
-</div>
+    <script>
+      const loginBtn = document.getElementById("loginBtn");
 
-<script>
-const loginBtn = document.getElementById('loginBtn');
+      loginBtn.addEventListener("click", () => {
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
 
-loginBtn.addEventListener('click', () => {
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value.trim();
+        // Get stored users from localStorage
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const user = users.find(
+          (u) => u.email === email && u.password === password
+        );
 
-  // Get stored users from localStorage
-  const users = JSON.parse(localStorage.getItem('users')) || [];
-  const user = users.find(u => u.email === email && u.password === password);
-
-  if(user){
-    localStorage.setItem('loggedInUser', JSON.stringify(user));
-    // Redirect based on role
-    if(user.role === 'admin'){
-      window.location.href = '/admin-dashboard.html';
-    } else {
-      window.location.href = '/user-dashboard.html';
-    }
-  } else {
-    alert('Invalid email or password!');
-  }
-});
-</script>
-
-</body>
+        if (user) {
+          localStorage.setItem("loggedInUser", JSON.stringify(user));
+          // Redirect based on role
+          if (user.role === "admin") {
+            window.location.href = "/admin-dashboard.html";
+          } else {
+            window.location.href = "/user-dashboard.html";
+          }
+        } else {
+          alert("Invalid email or password!");
+        }
+      });
+    </script>
+  </body>
 </html>

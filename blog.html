@@ -1,195 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=PT+Serif:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title> Blogs </title>
-  <link rel="icon" href="/Images/logo.png" type="image/png">
-  <link rel="stylesheet" href="blogcss.css" />
-</head>
-<body>
-    <main>
-<nav class="navbar">
-    <div class="navbar-left">
-      <img src="/Images/logo.png" alt="Logo" />
-    </div>
-    <div class="navbar-center">
-      <a href="/index.html" >Home</a>
-      <a href="/course-detail.html">Our Courses</a>
-      <a href="#" class="active">Blogs</a>
-      <a href="/team.html"> Our Team </a>
-      <a href="books.html">Books</a>
-      <a href="contact.html">Contact Us</a>
-       <button class="btn-signup">Sign Up</button>
-      <button class="btn-login">Login</button>
-    </div>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blogs</title>
+    <link rel="icon" href="/Images/logo.png" type="image/png" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="/styles/blogcss.css" />
+  </head>
 
- <div class="navbar-toggle">
-    <i class="fa fa-bars"></i>
-  </div>
+  <body>
+    <nav class="header-container"></nav>
 
+    <section>
+      <div class="header-content">
+        <h1>Anpadd Blogs</h1>
+        <p class="blog-description">
+          “Discover the power of learning through our Anpadd Blog, filled with
+          inspiring journeys, helpful tips, and ideas that fuel your passion for
+          growth.”
+        </p>
+      </div>
 
-    <div class="navbar-right">
-     
-      <button class="btn-signup">Sign Up</button>
-      <button class="btn-login">Login</button>
-    </div>
-  </nav>
-<section>
-  <div class="header-content">
-    <h1> Anpadd Blogs </h1>
-    <p class="blog-description">
-     “Discover the power of learning through our Anpadd Blog, filled with inspiring journeys, helpful tips, and ideas that fuel your passion for growth.”
-    </p>
-  </div>
-  <div class="searchbar">
-    <input type="text" id="searchInput" placeholder="Search Blogs..." />
-    <button>Search</button>
-  </div>
-</section>
-<div id="no-results" >
-  Sorry, No Blogs Found ! 
-</div>
-<div class="card-container">
-     <div class="card">
-      <img src="/Images/Blog Image/robinho.jpg" alt="Blog post image" class="card-image" />
-      <div class="card-content">
+      <div class="searchbar">
+        <input type="text" id="searchInput" placeholder="Search Blogs..." />
+        <button>Search</button>
+      </div>
+    </section>
+
+    <div id="no-results">Sorry, No Blogs Found !</div>
+
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="/Images/Blog Image/robinho.jpg"
+          alt="Blog post image"
+          class="card-image"
+        />
+        <div class="card-content">
           <div class="card-title">
-             Robinho : <span class="highlight">Dancing Past Defenders</span>
+            Robinho : <span class="highlight">Dancing Past Defenders</span>
           </div>
           <div class="card-date">15 December, 2020</div>
           <p class="card-summary">
-             On the football pitch, Robinho moves like a brush on a canvas, each dribble a stroke of brilliance. Defenders approach, but he glides past with a wink, a feint, a sudden burst of speed that leaves them grasping at air. It’s not just skill—it’s joy, creativity, and........
-         </p>
-             <a href="blog1.html" class="read-more-btn">Read more →</a>
-
+            On the football pitch, Robinho moves like a brush on a canvas, each
+            dribble a stroke of brilliance. Defenders approach, but he glides
+            past with a wink, a feint, a sudden burst of speed that leaves them
+            grasping at air. It’s not just skill—it’s joy, creativity,
+            and........
+          </p>
+          <a href="blog1.html" class="read-more-btn">Read more →</a>
+        </div>
+        <img src="/Images/logo.png" class="card-logo" alt="Logo" />
       </div>
-      <img src="/Images/logo.png" class="card-logo" alt="Logo" />
-  </div>
-   <div class="card">
-      <img src="/Images/Blog Image/dream.jpg" alt="Blog post image" class="card-image" />
-      <div class="card-content">
+
+      <div class="card">
+        <img
+          src="/Images/Blog Image/dream.jpg"
+          alt="Blog post image"
+          class="card-image"
+        />
+        <div class="card-content">
           <div class="card-title">
-             What Science Reveals About the Sleeping Mind : <span class="highlight">The Mystery of Dreams</span>
+            What Science Reveals About the Sleeping Mind :
+            <span class="highlight">The Mystery of Dreams</span>
           </div>
           <div class="card-date">27 October, 2018</div>
           <p class="card-summary">
-              Dreams have long captivated human curiosity. From ancient civilizations interpreting them as divine messages to modern scientists.........
+            Dreams have long captivated human curiosity. From ancient
+            civilizations interpreting them as divine messages to modern
+            scientists.........
           </p>
           <a href="#" class="read-more-btn">Read more →</a>
-
+        </div>
+        <img src="/Images/logo.png" class="card-logo" alt="Logo" />
       </div>
-      <img src="/Images/logo.png" class="card-logo" alt="Logo" />
-  </div>
 
       <div class="card">
-      <img src="/Images/Blog Image/life.jpg" alt="Blog post image" class="card-image" />
-      <div class="card-content">
+        <img
+          src="/Images/Blog Image/life.jpg"
+          alt="Blog post image"
+          class="card-image"
+        />
+        <div class="card-content">
           <div class="card-title">
-             The Timeless Journey of Life : <span class="highlight">Whispers of Evolution</span>
+            The Timeless Journey of Life :
+            <span class="highlight">Whispers of Evolution</span>
           </div>
+
           <div class="card-date">11 December, 2018</div>
           <p class="card-summary">
-             In the beginning, Earth was silent — a swirling sphere of fire and stone. Then came the rain, cooling the chaos, and from the ancient oceans, the first spark of life stirred. Tiny cells learned to breathe, to change..
-          </p><a href="#" class="read-more-btn">Read more →</a>
+            In the beginning, Earth was silent — a swirling sphere of fire and
+            stone. Then came the rain, cooling the chaos, and from the ancient
+            oceans, the first spark of life stirred. Tiny cells learned to
+            breathe, to change..
+          </p>
+          <a href="#" class="read-more-btn">Read more →</a>
+        </div>
+        <img src="/Images/logo.png" class="card-logo" alt="Logo" />
       </div>
-      <img src="/Images/logo.png" class="card-logo" alt="Logo" />
-  </div>
 
-     <div class="card">
-      <img src="/Images/Blog Image/paradox.jpeg" alt="Blog post image" class="card-image" />
-      <div class="card-content">
+      <div class="card">
+        <img
+          src="/Images/Blog Image/paradox.jpeg"
+          alt="Blog post image"
+          class="card-image"
+        />
+        <div class="card-content">
           <div class="card-title">
-             The Beauty of contradictions : <span class="highlight">Truth in Two Directions</span>
+            The Beauty of contradictions :
+            <span class="highlight">Truth in Two Directions</span>
           </div>
           <div class="card-date">1 June, 2019</div>
           <p class="card-summary">
-            Life is full of contradictions. Light cannot exist without darkness, joy feels deeper after sorrow, and strength often hides in vulnerability. In every paradox, there’s a quiet lesson: that opposing forces don’t cancel .....
-          </p><a href="#" class="read-more-btn">Read more →</a>
-
+            Life is full of contradictions. Light cannot exist without darkness,
+            joy feels deeper after sorrow, and strength often hides in
+            vulnerability. In every paradox, there’s a quiet lesson: that
+            opposing forces don’t cancel .....
+          </p>
+          <a href="#" class="read-more-btn">Read more →</a>
+        </div>
+        <img src="/Images/logo.png" class="card-logo" alt="Logo" />
       </div>
-      <img src="/Images/logo.png" class="card-logo" alt="Logo" />
-  </div>
-     <div class="card">
-      <img src="/Images/Blog Image/jacky.jpg" alt="Blog post image" class="card-image" />
-      <div class="card-content">
+
+      <div class="card">
+        <img
+          src="/Images/Blog Image/jacky.jpg"
+          alt="Blog post image"
+          class="card-image"
+        />
+        <div class="card-content">
           <div class="card-title">
-             Jack the Ripper: <span class="highlight">The Unsolved Horror</span>
+            Jack the Ripper: <span class="highlight">The Unsolved Horror</span>
           </div>
           <div class="card-date">12 September, 2019</div>
           <p class="card-summary">
-             In the fog-choked streets of Victorian London, fear walked at night. A shadow known only as Jack the Ripper stalked Whitechapel, leaving behind a trail of mystery and horror. His victims were women on the margins of society, and the killer vanished........
-          </p><a href="#" class="read-more-btn">Read more →</a>
-
+            In the fog-choked streets of Victorian London, fear walked at night.
+            A shadow known only as Jack the Ripper stalked Whitechapel, leaving
+            behind a trail of mystery and horror. His victims were women on the
+            margins of society, and the killer vanished........
+          </p>
+          <a href="#" class="read-more-btn">Read more →</a>
+        </div>
+        <img src="/Images/logo.png" class="card-logo" alt="Logo" />
       </div>
-      <img src="/Images/logo.png" class="card-logo" alt="Logo" />
-  </div>
-  
-
-  <!-- Add more cards as needed -->
-
-</div>
-
-
-
-<footer class="main-footer">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <div class="navbar-left">
-      <img src="/Images/logo.png" alt="Logo" />
+      <!-- Add more cards as needed -->
     </div>
-    </div>
-     <div class="footer-meta">
-    &copy; 2025 Anpadd. All rights reserved.
-  </div>
-    <div class="footer-social">
-  <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
-  <a href="#" class="fa fa-twitter" aria-label="Twitter"></a>
-  <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
-  <a href="#" class="fa fa-linkedin" aria-label="LinkedIn"></a>
-</div>
-  </div>
-</footer>
-</main>
-  <script>
-  document.querySelector('.navbar-toggle').addEventListener('click', () => {
-  document.querySelector('.navbar-center').classList.toggle('active');
-});
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const searchInput = document.getElementById('searchInput');
-     const noResults = document.getElementById('no-results');
-    if (!searchInput) return;
 
-    searchInput.addEventListener('input', function() {
-      const filter = this.value.toLowerCase();
-      const cards = document.querySelectorAll('.card');
-      let found = false;
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="navbar-left">
+            <img src="/Images/logo.png" alt="Logo" />
+          </div>
+        </div>
 
-      cards.forEach(card => {
-        const title = card.querySelector('.card-title')?.textContent.toLowerCase() || '';
-        const summary = card.querySelector('.card-summary')?.textContent.toLowerCase() || '';
+        <div class="footer-meta">&copy; 2025 Anpadd. All rights reserved.</div>
 
-        if (title.includes(filter) || summary.includes(filter)) {
-          card.style.display = '';
-          found = true;
-        } else {
-          card.style.display = 'none';
-        }
+        <div class="footer-social">
+          <a href="#" class="fa fa-facebook" aria-label="Facebook"></a>
+          <a href="#" class="fa fa-twitter" aria-label="Twitter"></a>
+          <a href="#" class="fa fa-instagram" aria-label="Instagram"></a>
+          <a href="#" class="fa fa-linkedin" aria-label="LinkedIn"></a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelector(".navbar-toggle").addEventListener("click", () => {
+        document.querySelector(".navbar-center").classList.toggle("active");
       });
-      noResults.style.display = found ? 'none' : 'block';
-    });
-  });
-</script>
-</body>
-</html>
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("searchInput");
+        const noResults = document.getElementById("no-results");
+        if (!searchInput) return;
 
-</body>
-</html>
+        searchInput.addEventListener("input", function () {
+          const filter = this.value.toLowerCase();
+          const cards = document.querySelectorAll(".card");
+          let found = false;
 
+          cards.forEach((card) => {
+            const title =
+              card.querySelector(".card-title")?.textContent.toLowerCase() ||
+              "";
+            const summary =
+              card.querySelector(".card-summary")?.textContent.toLowerCase() ||
+              "";
+
+            if (title.includes(filter) || summary.includes(filter)) {
+              card.style.display = "";
+              found = true;
+            } else {
+              card.style.display = "none";
+            }
+          });
+          noResults.style.display = found ? "none" : "block";
+        });
+      });
+    </script>
+    <script src="scripts/header.js"></script>
+  </body>
+</html>
