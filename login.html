@@ -19,27 +19,40 @@
 <script>
 const loginBtn = document.getElementById('loginBtn');
 
-loginBtn.addEventListener('click', () => {
+loginBtn.addEventListener('click', async () => {
   const email = document.getElementById('email').value.trim();
   const password = document.getElementById('password').value.trim();
 
-  // Get stored users from localStorage
-  const users = JSON.parse(localStorage.getItem('users')) || [];
-  const user = users.find(u => u.email === email && u.password === password);
+  if (!email || !password) {
+    alert("Please fill in both fields");
+    return;
+  }
 
-  if(user){
-    localStorage.setItem('loggedInUser', JSON.stringify(user));
-    // Redirect based on role
-    if(user.role === 'admin'){
-      window.location.href = '/admin-dashboard.html';
+  try {
+    const response = await fetch("api/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      credentials: "include", // ✅ keep this if backend sets cookies
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      alert("🎉 Login successful!");
+      console.log("Token saved in cookie automatically.");
+      // redirect to home page
+      window.location.href = "student.html";
     } else {
-      window.location.href = '/user-dashboard.html';
+      alert("❌ " + data.message);
     }
-  } else {
-    alert('Invalid email or password!');
+  } catch (error) {
+    console.error("Error:", error);
+    alert("⚠️ Unable to connect to server.");
   }
 });
 </script>
+
 
 </body>
 </html>
