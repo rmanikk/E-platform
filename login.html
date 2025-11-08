@@ -29,7 +29,7 @@ loginBtn.addEventListener('click', async () => {
   }
 
   try {
-    const response = await fetch("https://anpadd-backend-2.onrender.com/", {
+    const response = await fetch("https://anpadd-backend-2.onrender.com/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       credentials: "include", // ✅ keep this if backend sets cookies
@@ -56,4 +56,5 @@ loginBtn.addEventListener('click', async () => {
 
 </body>
 </html>
+
 
