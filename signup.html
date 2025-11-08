@@ -67,7 +67,7 @@ signupBtn.addEventListener('click', () => {
   if(!valid) return;
 
   // ✅ Correct fetch URL and syntax
-  fetch("api/signup", {
+  fetch("https://anpadd-backend-2.onrender.com/", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ name, email, password })
@@ -103,3 +103,4 @@ signupBtn.addEventListener('click', () => {
 
 </body>
 </html>
+
