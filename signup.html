@@ -6,7 +6,6 @@
   <title>Sign Up | Anpadd</title>
   <link rel="stylesheet" href="auth.css" />
   <style>
-    /* Inline error messages */
     .error-msg {
       color: #e63946;
       font-size: 13px;
@@ -33,7 +32,6 @@
   <button id="signupBtn">Sign Up</button>
   <a href="login.html" class="auth-link">Already have an account? Login</a>
 </div>
-
 <script>
 const signupBtn = document.getElementById('signupBtn');
 
@@ -48,53 +46,60 @@ signupBtn.addEventListener('click', () => {
 
   let valid = true;
 
-  // Name validation
+  // Validation
   const nameRegex = /^[a-zA-Z ]{2,50}$/;
   if(!nameRegex.test(name)){
     nameError.style.display = 'block';
     valid = false;
-  } else {
-    nameError.style.display = 'none';
-  }
+  } else nameError.style.display = 'none';
 
-  // Email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if(!emailRegex.test(email)){
     emailError.style.display = 'block';
     valid = false;
-  } else {
-    emailError.style.display = 'none';
-  }
+  } else emailError.style.display = 'none';
 
-  // Password validation
   if(password.length < 6){
     passwordError.style.display = 'block';
     valid = false;
-  } else {
-    passwordError.style.display = 'none';
-  }
+  } else passwordError.style.display = 'none';
 
   if(!valid) return;
 
-  // Get users from localStorage
-  const users = JSON.parse(localStorage.getItem('users')) || [];
-
-  // Check if user exists
-  if(users.some(u => u.email === email)){
-    emailError.textContent = 'User already exists';
-    emailError.style.display = 'block';
-    return;
-  }
-
-  // Add new user
-  const newUser = { name, email, password, role: 'user' };
-  users.push(newUser);
-  localStorage.setItem('users', JSON.stringify(users));
-
-  // Redirect to login page
-  window.location.href = 'login.html';
+  // ✅ Correct fetch URL and syntax
+  fetch("api/signup", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email, password })
+  })
+  .then(response => response.json().then(data => ({ ok: response.ok, status: response.status, data })))
+  .then(result => {
+    if (result.ok) {
+      alert("🎉 Account created successfully! Please log in.");
+      window.location.href = "login.html";
+    } else {
+      const error = result.data?.error || "Something went wrong";
+      if (error.toLowerCase().includes("email")) {
+        emailError.textContent = error;
+        emailError.style.display = "block";
+      } else if (error.toLowerCase().includes("password")) {
+        passwordError.textContent = error;
+        passwordError.style.display = "block";
+      } else if (error.toLowerCase().includes("name")) {
+        nameError.textContent = error;
+        nameError.style.display = "block";
+      } else {
+        alert(error);
+      }
+    }
+  })
+  .catch(error => {
+    console.error("Error:", error);
+    alert("⚠️ Unable to connect to server. Please ensure Node backend is running on port 8000.");
+  });
 });
 </script>
+
 
 </body>
 </html>
