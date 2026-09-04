@@ -566,9 +566,9 @@ Then open a pull request describing the change.
 
 # 📜 License
 
-This project currently does not declare a specific open-source license.
+This project was developed for academic and educational purposes.
 
-If you intend to distribute or accept external contributions under defined permissions, add an appropriate `LICENSE` file.
+Copyright © 2026 Anpadd.
 
 ---
 
